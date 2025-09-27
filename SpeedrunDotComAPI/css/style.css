@@ -1,0 +1,110 @@
+.modak-regular {
+  font-family: "Modak", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+#titleName
+{
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+#searchUI
+{
+    display: flex;
+    justify-content: center;
+}
+.searchItem
+{
+    margin: 10px;
+}
+
+#gameSearch
+{
+    width: 500px;
+    height: 25px;
+}
+
+#gameCover
+{
+    width: 300px;
+    height: 400px;
+    opacity: 0;
+}
+body
+{
+    background: linear-gradient(rgb(255,255,255), rgb(205,205,205));
+    background-attachment: fixed;
+}
+
+#gameInfo
+{
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameName
+{
+    font-size: 48px;
+    text-align: center;
+}
+
+#gameBody
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#categorySelect
+{
+    width: max-content;
+    height: 25px;
+    display: none;
+}
+
+#categoryInfo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lbUsername
+{
+    font-size: 32px;
+}
+
+#lbTime
+{
+    font-size: 48px;
+}
+.categoryItems
+{
+    margin: 10px;
+}
+
+#user
+{
+    display: flex;
+    align-items: center;
+}
+
+#categories
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subCategories
+{
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    gap: 10px;
+}

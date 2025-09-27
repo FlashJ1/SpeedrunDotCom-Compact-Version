@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SpeedrunDotComAPI</title>
+</head>
+<body>
+    <h1 class="modak-regular" id="titleName">SpeedrunDotComAPI</h1>
+    <div id="searchUI">
+        <input type="text" class="searchItem" id="gameSearch" placeholder="Enter the game">
+        <button class="searchItem" id="searchBt" onclick="searchGame()">Search</button>
+    </div>
+    
+    <div id="gameBody">
+        <div id="gameInfo">
+            <label class="modak-regular" id="gameName"></label>
+            <img src="" alt="" id="gameCover">
+        </div>
+        <div id="categoryInfo">
+            <div id="categories">
+                <select name="" class="categoryItems" id="categorySelect"></select>
+                <div id="subCategories"></div>
+            </div>
+            <div id="user">
+                <label for="" class="modak-regular categoryItems" id="lbUsername"></label>
+                <!-- <img src="" alt="" id="flagIMG"> -->
+            </div>
+            <label for="" class="modak-regular categoryItems" id="lbTime"></label>
+        </div>
+        
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -215,6 +215,7 @@ async function getLeaderboard()
         flag = document.createElement("img");
         flag.id = "flagIMG"
         let flagCode = userData.data.location.country.code;
+        flagCode = flagCode.replace("/", "-");
         flag.src = `https://flagcdn.com/h40/${flagCode}.png`
 
         let userBody = document.getElementById("user");

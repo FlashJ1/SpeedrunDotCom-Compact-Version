@@ -7,7 +7,6 @@ let flag;
 
 async function searchGame()
 {
-    //varDiv.innerHTML = "";
 
     let userGame = document.getElementById("gameSearch").value.toLowerCase();
 
@@ -61,13 +60,19 @@ async function searchGame()
                 subSelect.id = variable.id;
                 subSelect.name = variable.name;
 
+                let emptyOpinion = document.createElement("option");
+                emptyOpinion.value = "";
+                emptyOpinion.text = `${variable.name}: Empty`;
+                subSelect.appendChild(emptyOpinion);
 
                 for (let [valueId, valueName] of Object.entries(variable.values.choices))
                 {
+                    
                     let option = document.createElement("option");
                     option.value = `var-${variable.id}=${valueId}`;
                     option.text = `${variable.name}: ${valueName}`;
                     subSelect.appendChild(option);
+
                 }
 
                 subSelect.addEventListener('change', getLeaderboard);
@@ -126,12 +131,10 @@ async function getLeaderboard()
         let varSelects = varDiv.querySelectorAll("select");
         varSelects.forEach(sel =>
         {
-            //console.log(sel.value);
             if (sel.value)
             {
                 queryParams.push(sel.value);
             }
-            //console.log("queryParams:", queryParams);
         })
     }
 
@@ -191,10 +194,6 @@ async function getLeaderboard()
     {
         alert("This run doesn't have video!");
     }
-    
-
-
-    //console.log(leaderboardData.data.runs[0].run.videos.links[0].uri);
 
     let username = document.getElementById("lbUsername");
 
@@ -203,8 +202,6 @@ async function getLeaderboard()
     const UserAPI = await fetch(`https://www.speedrun.com/api/v1/users/${userID}`);
 
     const userData = await UserAPI.json();
-
-    //console.log(userData.data.names.international);
 
     username.innerHTML = userData.data.names.international;
 
@@ -238,14 +235,6 @@ async function getLeaderboard()
     let lbTime = document.getElementById("lbTime");
 
     lbTime.innerHTML = currTime;
-
-    //console.log(currTime);
-
-    
-
-    //console.log(url);
-
-    //console.log(leaderboardData.data.runs[0]);
 }
 
 function timeConventer(t)
